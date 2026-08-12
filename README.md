@@ -18,7 +18,7 @@ Below steps we will try to achieve. Project start with developer write code loca
 14. Once deployment is done, monitor the application via Prometheus & Grafana. To monitor application, we will use blackbox exporter. BlackBox exporter will enable us to update about website traffic, website is up or not etc.
 
 
-Steo by steo what we will do is -
+Step by step what we will do is -
 1. We will prepare network environment. We have to make sure the network is secure & isolated as well private.
 2. Next we will prepare Kubernetes cluster where we will deploy our application and scan for vulnerability.
 3. We will create multiple virtual machines within secure network so that we can install different servers like Sonarqube server, Nexus server, Jenkins and different monitoring tools.
@@ -27,7 +27,7 @@ Steo by steo what we will do is -
 6. Once we successfully push code in code repo, we will start working on CICD pipeline and will deploy our application.
 7. Configure the mail notification to get the status of our pipeline. [failed/success)
 8. Last, we will deploy monitoring system like Prometheus & Grafana. Here we will have to type of monitoring, system level monitoring for monitoring CPU usage, RAM usage & second is application level monitoring like traffic flow & application is live.
-9. 
+
 
 
 
