@@ -32,6 +32,11 @@ VPC - devops-vpc <br/>
 Security-Group <br/>
 Inbound rules -  <br/>
 <table>
+   <tr>
+   <td> <b>TYPE </b></td>
+   <td> <b> PORT</b></td>
+   <td> <b> DESCRIPTION</b></td>
+</tr>
 <tr>
    <td> SMTP </td>
    <td>  PORT 25</td>
