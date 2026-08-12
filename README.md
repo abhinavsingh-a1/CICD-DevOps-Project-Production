@@ -84,6 +84,11 @@ Connect with VM via SSH & install kubernetes cluster.
 
 # KUBERNETES SETUP
 
+From Step 1 - Step 4, copy all commands and ctrl+right click - paste in install.sh file - <br/>
+vi install.sh <br/>
+chmod +x install.sh <br/>
+./ install.sh<br/>
+<br/>
 ### 1. Update System Packages [On Master & Worker Node]
 
 ```bash
