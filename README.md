@@ -28,14 +28,47 @@ Step by step what we will do is -
 7. Configure the mail notification to get the status of our pipeline. [failed/success)
 8. Last, we will deploy monitoring system like Prometheus & Grafana. Here we will have to type of monitoring, system level monitoring for monitoring CPU usage, RAM usage & second is application level monitoring like traffic flow & application is live.
 
-VPC - devops-vpc
-Security-Group
-Inbound rules - 
-SMTP -            PORT 25 - To send email generally in corporate.
-Customer TCP -    PORT 3000-10000 - for the deployed application
-SSH -             PORT 22 - To access virtual machines
-Custom TCP        PORT 6443 - Required when kubernetes cluster is setup
-SMTPS -           PORT 465 - To send email from Jenkins server once pipelines finish or fail.
-Custom TCP for    PORT 30000-32767 ==>> for deployment of applications when using VM as kubernetes cluster.
+VPC - devops-vpc <br/>
+Security-Group <br/>
+Inbound rules -  <br/>
+<table>
+<tr>
+   <td> SMTP </td>
+   <td>  PORT 25</td>
+   <td>  To send email generally in corporate.</td>
+</tr>
+<tr>
+   <td> Customer TCP</td>
+   <td> PORT 3000-10000</td>
+   <td> for the deployed application</td>
+</tr>
+<tr>
+   <td> SSH </td>
+   <td> PORT 22</td>
+   <td> To access virtual machines</td>
+</tr>
+<tr>
+   <td> Custom TCP  </td>
+   <td> PORT 6443</td>
+   <td> Required when kubernetes cluster is setup</td>
+</tr>
+<tr>
+   <td> SMTPS </td>
+   <td> PORT 465</td>
+   <td> To send email from Jenkins server once pipelines finish or fail.</td>
+</tr>
+<tr>
+   <td> Custom TCP 
+</td>
+   <td> PORT 30000-32767</td>
+   <td> for deployment of applications when using VM as kubernetes cluster.</td>
+</tr>
+   
+</table>
+
+
+
+
+
 
 
