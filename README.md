@@ -1,6 +1,7 @@
 <img width="1130" height="678" alt="image" src="https://github.com/user-attachments/assets/4b901de0-0a01-41f5-bed5-2b40e22c7e41" />
 
 # Objective -
+Below steps we will try to achieve. Project start with developer write code locally. Then -
 1. Once developer test code on local system, he push code to GitHub
 2. Once code is pushed to GitHub, Jenkins Pipeline will run. In Pipeline first: Code is compiled, which will find out syntax based error.
    2.1  For system level monitoring like how much CPU is used, how much RAM is used, we will use Node Exporter for Jenkins.
