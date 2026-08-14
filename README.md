@@ -83,6 +83,17 @@ Create 3 seesion - 1 for master, 2 for slave nodes
 Connect with VM via SSH & install kubernetes cluster.
 
 # KUBERNETES SETUP
+## EXECUTE MASTER BASH FILE ON MASTER EC2 INSTANCE
+## EXECUTE WORKER BASH FILE ON WORKER EC2 INSTANCE
+
+### EXPLANATION IS GIVEN IN BASH FILE
+
+
+```bash
+#!/bin/bash
+```
+
+---------------------------------------------OLD VERSION----------------------------------------
 
 From Step 1 - Step 4, copy all commands and ctrl+right click - paste in install.sh file - <br/>
 vi install.sh <br/>
@@ -121,6 +132,10 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 ```bash
 sudo apt update
 ```
+
+## Kubeadm is a tool to bootstrape, spin up Kubernetes cluster
+## The kubelet is the main agent that runs on every worker node in a Kubernetes cluster. It takes configuration instructions, called PodSpecs, andmakes sure the containers described in them are running and healthy. It acts as the bridge between the control plane and the local node
+## kubectl (pronounced "cube-control" or "cube-ctl") isthe primary command-line tool (CLI) used to communicate with and manage a Kubernetes cluster.
 
 ### 6. Install Kubernetes Components[On Master & Worker Node]
 
