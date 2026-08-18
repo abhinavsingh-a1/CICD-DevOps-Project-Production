@@ -83,7 +83,7 @@ Create 3 seesion - 1 for master, 2 for slave nodes
 Connect with VM via SSH & install kubernetes cluster.
 
 # KUBERNETES SETUP
-## EXECUTE MASTER BASH FILE ON MASTER EC2 INSTANCE
+## 1. EXECUTE MASTER BASH FILE ON MASTER EC2 INSTANCE
 
 ---
 
@@ -119,7 +119,7 @@ Installs Calico network<br/>
 ## Below result will be executed on worked node -
 kubeadm join :6443 --token ... --discovery-token-ca-cert-hash sha256:...
 
-# EXECUTE WORKER BASH FILE ON WORKER EC2 INSTANCE
+# 2. EXECUTE WORKER BASH FILE ON WORKER EC2 INSTANCE
 ---
 
 ## Run script
