@@ -173,7 +173,7 @@ sudo kubeadm join <MASTER-IP>:6443 \
 
 ---
 
-# 2.4 VERIFY CLUSTER
+## 2.4 VERIFY CLUSTER
 
 kubectl get nodes
 
@@ -187,7 +187,7 @@ worker-172-31-x   Ready
 
 ---
 
-# 2.5 VERIFY PODS
+## 2.5 VERIFY PODS
 
 kubectl get pods -A
 
