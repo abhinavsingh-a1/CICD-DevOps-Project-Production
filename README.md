@@ -84,7 +84,82 @@ Connect with VM via SSH & install kubernetes cluster.
 
 # KUBERNETES SETUP
 ## EXECUTE MASTER BASH FILE ON MASTER EC2 INSTANCE
-## EXECUTE WORKER BASH FILE ON WORKER EC2 INSTANCE
+
+---
+
+## Prerequisite: Install Docker and runtime dependencies
+
+Before running the master or worker setup scripts, run `docker-install.sh` on every node to install Docker and configure the container runtime.
+
+```bash
+chmod +x docker-install.sh
+./docker-install.sh
+```
+
+---
+
+## Run script
+
+chmod +x k8s-master-clean.sh
+./master-node-setup.sh
+
+---
+
+This script will -<br/>
+Sets hostname to master<br/>
+Disables swap<br/>
+Configures kernel networking<br/>
+Installs containerd<br/>
+Enables SystemdCgroup<br/>
+Installs kubeadm, kubelet, kubectl<br/>
+Initializes cluster<br/>
+Configures kubectl<br/>
+Installs Calico network<br/>
+
+## Below result will be executed on worked node -
+kubeadm join :6443 --token ... --discovery-token-ca-cert-hash sha256:...
+
+# EXECUTE WORKER BASH FILE ON WORKER EC2 INSTANCE
+---
+
+## Run script
+
+chmod +x *.sh
+./worker-node-setup.sh
+
+---
+
+## Join cluster
+
+sudo kubeadm join <MASTER-IP>:6443 \
+--token <TOKEN> \
+--discovery-token-ca-cert-hash sha256:<HASH> \
+--v=5
+
+---
+
+# 🔍 VERIFY CLUSTER
+
+kubectl get nodes
+
+---
+
+## ✅ Expected Output
+
+master            Ready
+worker-172-31-x   Ready
+worker-172-31-x   Ready
+
+---
+
+# 📦 VERIFY PODS
+
+kubectl get pods -A
+
+All should be Running
+
+---
+
 
 ### EXPLANATION IS GIVEN IN BASH FILE
 
