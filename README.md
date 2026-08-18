@@ -125,6 +125,9 @@ kubeadm join :6443 --token ... --discovery-token-ca-cert-hash sha256:...
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
 ```
 
+<img width="782" height="277" alt="image" src="https://github.com/user-attachments/assets/40208825-c6bb-41ed-9d5a-49548265b349" />
+
+
 # 2. EXECUTE WORKER BASH FILE ON WORKER EC2 INSTANCE
 
 ## 2.1 Prerequisite: Install Docker and runtime dependencies
