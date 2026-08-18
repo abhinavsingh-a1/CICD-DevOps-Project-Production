@@ -87,7 +87,7 @@ Connect with VM via SSH & install kubernetes cluster.
 
 ---
 
-## Prerequisite: Install Docker and runtime dependencies
+## 1.1 Prerequisite: Install Docker and runtime dependencies
 
 Before running the master or worker setup scripts, run `docker-install.sh` on every node to install Docker and configure the container runtime.
 
@@ -98,7 +98,7 @@ chmod +x docker-install.sh
 
 ---
 
-## Run script
+## 1.2 Run script
 
 chmod +x k8s-master-clean.sh
 ./master-node-setup.sh
@@ -119,17 +119,34 @@ Installs Calico network<br/>
 ## Below result will be executed on worked node -
 kubeadm join :6443 --token ... --discovery-token-ca-cert-hash sha256:...
 
+## 1.3 Deploy Ingress Controller (NGINX) [On MasterNode]
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
+```
+
 # 2. EXECUTE WORKER BASH FILE ON WORKER EC2 INSTANCE
+
+## 2.1 Prerequisite: Install Docker and runtime dependencies
+
+Before running the master or worker setup scripts, run `docker-install.sh` on every node to install Docker and configure the container runtime.
+
+```bash
+chmod +x docker-install.sh
+./docker-install.sh
+```
+
+
 ---
 
-## Run script
+## 2.2 Run script
 
 chmod +x *.sh
 ./worker-node-setup.sh
 
 ---
 
-## Join cluster
+## 2.3 Join cluster
 
 sudo kubeadm join <MASTER-IP>:6443 \
 --token <TOKEN> \
@@ -138,13 +155,13 @@ sudo kubeadm join <MASTER-IP>:6443 \
 
 ---
 
-# 🔍 VERIFY CLUSTER
+# 2.4 VERIFY CLUSTER
 
 kubectl get nodes
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 master            Ready
 worker-172-31-x   Ready
@@ -152,7 +169,7 @@ worker-172-31-x   Ready
 
 ---
 
-# 📦 VERIFY PODS
+# 2.5 VERIFY PODS
 
 kubectl get pods -A
 
@@ -161,88 +178,7 @@ All should be Running
 ---
 
 
-### EXPLANATION IS GIVEN IN BASH FILE
 
-
-```bash
-#!/bin/bash
-```
-
----------------------------------------------OLD VERSION----------------------------------------
-
-From Step 1 - Step 4, copy all commands and ctrl+right click - paste in install.sh file - <br/>
-vi install.sh <br/>
-chmod +x install.sh <br/>
-./ install.sh<br/>
-<br/>
-### 1. Update System Packages [On Master & Worker Node]
-
-```bash
-sudo apt-get update
-```
-
-### 2. Install Docker[On Master & Worker Node]
-
-```bash
-sudo apt install docker.io -y
-sudo chmod 666 /var/run/docker.sock
-```
-
-### 3. Install Required Dependencies for Kubernetes[On Master & Worker Node]
-
-```bash
-sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
-sudo mkdir -p -m 755 /etc/apt/keyrings
-```
-
-### 4. Add Kubernetes Repository and GPG Key[On Master & Worker Node]
-
-```bash
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-```
-
-### 5. Update Package List[On Master & Worker Node]
-
-```bash
-sudo apt update
-```
-
-## Kubeadm is a tool to bootstrape, spin up Kubernetes cluster
-## The kubelet is the main agent that runs on every worker node in a Kubernetes cluster. It takes configuration instructions, called PodSpecs, andmakes sure the containers described in them are running and healthy. It acts as the bridge between the control plane and the local node
-## kubectl (pronounced "cube-control" or "cube-ctl") isthe primary command-line tool (CLI) used to communicate with and manage a Kubernetes cluster.
-
-### 6. Install Kubernetes Components[On Master & Worker Node]
-
-```bash
-sudo apt install -y kubeadm=1.28.1-1.1 kubelet=1.28.1-1.1 kubectl=1.28.1-1.1
-```
-
-### 7. Initialize Kubernetes Master Node [On MasterNode]
-
-```bash
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16
-```
-
-### 8. Configure Kubernetes Cluster [On MasterNode]
-
-```bash
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
-```
-
-### 9. Deploy Networking Solution (Calico) [On MasterNode]
-
-```bash
-kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
-```
-
-### 10. Deploy Ingress Controller (NGINX) [On MasterNode]
-
-```bash
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
-```
 
 
 
