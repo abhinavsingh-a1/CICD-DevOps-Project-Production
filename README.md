@@ -133,14 +133,14 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 ### Go to https://github.com/Shopify/kubeaudit/releases
 
 ```
-wget https://github.com/Shopify/kubeaudit/releases/download/v0.22.2/kubeaudit_0.22.2_linux_amd64.tar.gz<br/>
-<br/>
-tar -xvzf kubeaudit_0.22.2_linux_amd64.tar.gz<br/>
-<br/>
-sudo mv kubeaudit /usr/local/bin/<br/>
-<br/>
-kubeaudit all<br/>
-<br/>
+wget https://github.com/Shopify/kubeaudit/releases/download/v0.22.2/kubeaudit_0.22.2_linux_amd64.tar.gz
+
+tar -xvzf kubeaudit_0.22.2_linux_amd64.tar.gz
+
+sudo mv kubeaudit /usr/local/bin/
+
+kubeaudit all
+
 ```
 
 # 2. EXECUTE WORKER BASH FILE ON WORKER EC2 INSTANCE
