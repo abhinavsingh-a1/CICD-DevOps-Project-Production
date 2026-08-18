@@ -128,6 +128,21 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 <img width="782" height="277" alt="image" src="https://github.com/user-attachments/assets/40208825-c6bb-41ed-9d5a-49548265b349" />
 
 
+## 1.4 Install kubeaudit -
+
+### Go to https://github.com/Shopify/kubeaudit/releases
+
+```
+wget https://github.com/Shopify/kubeaudit/releases/download/v0.22.2/kubeaudit_0.22.2_linux_amd64.tar.gz<br/>
+<br/>
+tar -xvzf kubeaudit_0.22.2_linux_amd64.tar.gz<br/>
+<br/>
+sudo mv kubeaudit /usr/local/bin/<br/>
+<br/>
+kubeaudit all<br/>
+<br/>
+```
+
 # 2. EXECUTE WORKER BASH FILE ON WORKER EC2 INSTANCE
 
 ## 2.1 Prerequisite: Install Docker and runtime dependencies
