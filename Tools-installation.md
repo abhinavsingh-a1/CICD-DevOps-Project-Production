@@ -43,10 +43,12 @@ docker ps
 
 <img width="1221" height="36" alt="image" src="https://github.com/user-attachments/assets/b6039b46-13ca-4195-9446-ee583a58233a" />
 
-# Install Nexus
+check public IP of EC2 instance -
 
 ```
-docker run -d --name Nexus -p 8081:8081 sonatype/nexus3:latest
+checkif config
 ```
 
+default passpword for sonarqube is admin for user admin -
 
+<img width="396" height="254" alt="image" src="https://github.com/user-attachments/assets/e59e661c-f640-4e96-ab98-fdc0e60427d2" />
