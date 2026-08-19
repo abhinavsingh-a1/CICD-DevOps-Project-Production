@@ -46,7 +46,7 @@ docker ps
 check public IP of EC2 instance -
 
 ```
-checkif config
+curl ifconfig.me
 ```
 
 default passpword for sonarqube is admin for user admin -
