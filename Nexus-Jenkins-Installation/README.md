@@ -197,6 +197,20 @@ Look for servers segment and add below 2 segments there & submit -
 <br/>
 # For EKS, create service account (Follow EKS-Setup.md document) -
 <br/>
+Create namespace -<br/>
+```bash
+kubectl create ns webapps
+```
+<br/>
+Create Service Account -<br/>
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jenkins
+  namespace: webapps
+```
+<br/>
 
 <br/>
 <br/>
