@@ -179,14 +179,20 @@ Go to Manage Jenkins >> Manage Files >> New Configuration -
 
 <br/>
 Now in Settings.xml file we will provide credentials for accessing Nexus -
+<br/><br/><br/><br/>
+Look for servers segment and add below 2 segments there & submit - 
 <br/>
-Look for servers segment - 
+&lt;server&gt;<br/>
+      &lt;id&gt;maven-releases&lt;/id&gt;<br/>
+      &lt;username&gt;admin&lt;/username&gt;<br/>
+      &lt;password&gt;admin123&lt;/password&gt;<br/>
+    &lt;/server&gt;<br/>
 <br/>
-<server>
-      <id>maven-releases</id>
-      <username>admin</username>
-      <password>admin123</password>
-    </server>
+    &lt;server&gt;<br/>
+      &lt;id&gt;maven-snapshots&lt;/id&gt;<br/>
+      &lt;username&gt;admin&lt;/username&gt;<br/>
+      &lt;password&gt;admin123&lt;/password&gt;<br/>
+    &lt;/server&gt;<br/>
 <br/>
 <br/>
 <br/>
