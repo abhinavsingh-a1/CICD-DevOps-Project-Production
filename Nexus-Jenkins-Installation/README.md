@@ -172,6 +172,49 @@ Paste in POM.xml inside URL<br/>
 Do above 2 changes in POM.xml file.
 <br/>
 <br/>
+Go to Manage Jenkins >> Manage Files >> New Configuration -
+<br/>
+<img width="861" height="834" alt="image" src="https://github.com/user-attachments/assets/d187b247-a2aa-4c07-a453-f32551616143" />
+<img width="765" height="193" alt="image" src="https://github.com/user-attachments/assets/198da1da-2c18-4119-a7f4-1a7d39fb6e16" />
+
+<br/>
+Now in Settings.xml file we will provide credentials for accessing Nexus -
+<br/>
+Look for servers segment - 
+<br/>
+<server>
+      <id>maven-releases</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
