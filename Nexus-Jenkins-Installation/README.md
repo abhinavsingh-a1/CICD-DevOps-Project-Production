@@ -87,11 +87,49 @@ Click on New Item -
 <br/>Click Ok
 <br/>Go to Pipeline >> Configure >>
 <br/>
+<img width="514" height="502" alt="image" src="https://github.com/user-attachments/assets/9f56476c-5e06-44ae-b0bb-7801d89aade6" /><br/>
+<br/>
+Under pipeline section, select Hello World & copy & paste multiple sections of Hello World -<br/>
+<br/>
+<img width="1299" height="708" alt="image" src="https://github.com/user-attachments/assets/ff2804de-e096-4e99-8113-b9321d309c51" /><br/>
+<br/>
+Lets start writing Pipeline -
+<br/>
+Add tools & first stage Git Checkout -
+<br/>
+
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 # NEXUS
 
 Copy IP address and place it with port 8081. Get UI of Nexus, id = admin, password=admin123, select disable ananymous access -
