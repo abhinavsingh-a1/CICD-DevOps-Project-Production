@@ -195,7 +195,9 @@ Look for servers segment and add below 2 segments there & submit -
     &lt;/server&gt;<br/>
 <br/>
 <br/>
+# For EKS, create service account (Follow EKS-Setup.md document) -
 <br/>
+
 <br/>
 <br/>
 <br/>
